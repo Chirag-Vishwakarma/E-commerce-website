@@ -1,0 +1,423 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+/*To Override other style-sheets(Bootstrap etc.) specified before style.css in index.html file*/
+:root {
+  font-size: 20px;
+}
+
+*, body, ::before, ::after {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.75;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: white;
+  color: black;
+  overflow-x: hidden;
+}
+
+/*Custom CSS*/
+a, a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+.btn-danger {
+  background-color: #f63440;
+  border-color: #f63440;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+}
+.btn-danger:hover {
+  color: #f63440;
+  background: transparent;
+}
+
+.btn-outline-danger {
+  color: white;
+  border-color: white;
+  transition: all 0.3s ease-in-out;
+}
+.btn-outline-danger:hover {
+  background-color: #f63440;
+  border-color: #f63440;
+}
+
+.headline {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.headline h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem;
+  font-weight: bold;
+}
+.headline h2::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 0.2rem;
+  width: 30%;
+  background-color: #f63440;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes shine {
+  100% {
+    left: 150%;
+  }
+}
+@keyframes jumping {
+  100% {
+    transform: translateY(-1rem);
+  }
+}
+/*Scrollbar Customization*/
+::-webkit-scrollbar {
+  width: 0.75rem;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: #f63440;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: black;
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+/*Navigation*/
+.header .navbar {
+  box-shadow: 0 0.125rem 0.675rem rgba(0, 0, 0, 0.05);
+}
+.header .navbar-brand img {
+  height: 2rem;
+}
+.header .nav-item {
+  padding: 0 0.25rem;
+}
+.header .nav-link {
+  color: black;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.header .nav-link:hover, .header .nav-link.active {
+  color: #f63440;
+}
+
+/*Home*/
+.home .home-banner-1, .home .home-banner-2 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 80% 100%;
+  min-height: 800px;
+  position: relative;
+}
+.home .home-banner-1 {
+  background-image: url("../images/slide1.jpg");
+}
+.home .home-banner-2 {
+  background-image: url("../images/slide2.jpg");
+}
+.home .home-banner-text {
+  position: absolute;
+  top: 35%;
+  left: 10%;
+}
+.home h1 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+.home h2 {
+  color: #f63440;
+}
+.home .carousel-indicators [data-bs-target] {
+  background-color: #f63440;
+  height: 0.3rem;
+  width: 3rem;
+}
+.home .carousel-control-prev-icon, .home .carousel-control-next-icon {
+  background: transparent;
+}
+.home .slider-icon {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f63440;
+}
+.home .carousel-control-prev, .home .carousel-control-next {
+  width: 4rem;
+}
+
+/*Offers*/
+.offers {
+  padding-top: 6rem;
+}
+.offers .offer-box {
+  position: relative;
+  text-align: center;
+}
+.offers .offer-box .offer-image {
+  position: relative;
+  overflow: hidden;
+}
+.offers .offer-box .offer-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: 2;
+  display: block;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  transform: skewX(-25deg);
+}
+.offers .offer-box .offer-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.offers .offer-box .offer-image .offer-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 100%;
+  bottom: 100%;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.offers .offer-box:hover .offer-image::before {
+  animation: shine 1s;
+}
+.offers .offer-box .offer-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 100%;
+  bottom: 100%;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 250ms ease-out;
+}
+.offers .offer-box .offer-info .offer-heading {
+  text-transform: uppercase;
+  font-size: 3rem;
+  line-height: 1;
+  color: white;
+}
+.offers .offer-box .offer-info .offer-title {
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1;
+  color: white;
+  letter-spacing: 2px;
+}
+
+/*Products*/
+.products {
+  padding-top: 6rem;
+  /*Up to 75% off*/
+}
+.products .product-list .product-image .sale {
+  background-color: #f63440;
+  padding: 0.2rem 0.6rem;
+  color: white;
+  border-radius: 0.4rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 99;
+}
+.products .product-list .product-image img {
+  transition: all 0.5s ease-in-out;
+}
+.products .product-list .product-image .product-image-secondary {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+}
+.products .product-list .product-image .product-image-secondary:hover {
+  opacity: 1;
+}
+.products .product-list .product-name h3 {
+  font-size: 1.3rem;
+  color: black;
+  transition: all 0.3s ease;
+}
+.products .product-list .product-name h3:hover {
+  color: #f63440;
+}
+.products .product-list .product-name .amount {
+  font-size: 1.1rem;
+  color: #f63440;
+}
+.products .product-list .product-name .amount del {
+  color: #aaa;
+}
+.products .product-list .product-name .ti-star {
+  color: #aaa;
+}
+.products .product-list .product-name .ti-star.active {
+  color: #f63440;
+}
+.products .product-list .product-name .add-to-cart {
+  background-color: transparent;
+  border: none;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.products .product-list .product-name .add-to-cart:hover {
+  color: #f63440;
+}
+.products .up-to-off {
+  position: relative;
+}
+.products .up-to-off::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  cursor: pointer;
+}
+.products .up-to-off img {
+  transition: 0.5s;
+}
+.products .up-to-off:hover img {
+  transform: scale(1.1);
+}
+.products .up-to-off .up-to-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/*Testimonials*/
+.testimonials {
+  padding: 6rem 0 8rem;
+}
+.testimonials .testimonial-wrapper {
+  border: 2px solid #f5f5f5;
+  border-radius: 0.5rem;
+  padding: 1rem 5rem;
+}
+.testimonials .testimonial-wrapper img {
+  border-radius: 100%;
+  height: 6rem;
+  width: 6rem;
+  margin: 1.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.testimonials .testimonial-wrapper span {
+  color: #aaa;
+  text-transform: uppercase;
+  display: block;
+  margin: 1rem 0;
+}
+.testimonials .testimonial-wrapper p {
+  color: #aaa;
+  font-size: 1rem;
+}
+.testimonials .carousel-indicators [data-bs-target] {
+  background-color: #f63440;
+  height: 0.3rem;
+  width: 3rem;
+}
+.testimonials .carousel-indicators {
+  bottom: -3rem;
+}
+.testimonials .carousel-control-prev-icon, .testimonials .carousel-control-next-icon {
+  background: transparent;
+}
+.testimonials .slider-icon {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f63440;
+}
+.testimonials .carousel-control-prev {
+  left: -6.5rem;
+}
+.testimonials .carousel-control-next {
+  right: -6.5rem;
+}
+
+/*Contact*/
+.contact {
+  background-color: #f5f5f5;
+  padding: 4rem 0;
+}
+.contact .form-group {
+  margin-bottom: 1.5rem;
+}
+.contact .form-control {
+  font-size: 1.1rem;
+  border: none;
+  box-shadow: 0 0.5rem 0.5rem 0.25rem rgba(0, 0, 0, 0.12);
+}
+
+/*Footer*/
+footer {
+  background-color: #f63440;
+  color: white;
+  padding: 2rem 0;
+}
+
+/*Scroll-to-top*/
+.scroll-to-top {
+  position: fixed;
+  z-index: 1;
+  bottom: 9vh;
+  left: 48vw;
+}
+.scroll-to-top:hover {
+  animation: jumping 0.4s ease infinite alternate;
+}
+.scroll-to-top img {
+  height: 1.75rem;
+  width: 1.75rem;
+}
+
+/*Breakpoint Size (Responsive)*/
+#breakpoint::before {
+  font-size: 1rem;
+  position: fixed;
+  z-index: 1000;
+  bottom: 0vh;
+  right: 0vw;
+}/*# sourceMappingURL=style.css.map */
