@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>e-Store</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	  <meta name="keywords" content="E-commerce, Shop, Shoping, Store, e-store, Electronic, Cloths, Buying, Selling, Online, Products, Design, Web, Best, Cheapest, Discount, offer" />
+	  <meta name="description" content="E-commerce Website" />
+	  <meta name="author" content="Chirag Vishwakarma" />
+    
+    <!--Favicon-->
+	  <link rel="icon" type="image/x-icon" href="assets/images/favicon.jpg">
+    
+    <!--Themify Icons-->
+    <link rel="stylesheet" href="assets/css/themify-icons/themify-icons.css">
+    
+    <!--Bootstrap 5 CSS-->
+    <link rel="stylesheet" href="assets\css\bootstrap-5.3.2-dist\css\bootstrap.min.css">
+	  
+    <!--style.css-->
+    <link rel="stylesheet" href="assets\css\style.css">
+
+    <!--responsive.css-->
+    <link rel="stylesheet" href="assets\css\responsive.css">
+  
+  </head>
+	<body>
+    <!--Navigation Section-->
+    <section id="header" class="header">
+
+      <nav class="navbar navbar-expand-lg bg-white fixed-top">
+        <div class="container-fluid container-xxl" >
+          
+          <a class="navbar-brand ms-3" href="#">
+            <img decoding="async" src="assets/images/logo/logo.jpg" alt="Logo" class="image-fluid">
+          </a>
+
+          <ul class="navbar-nav ms-auto me-3">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#offers">Offers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#products">Products</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+
+          <!--Dropdown Menu Button-->
+          <button class="menuButton d-lg-none" onclick="document.getElementById('menu').style.transform='translateY(0)'">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+          
+        </div>
+      </nav>
+
+      <!--Dropdown Navigation Menu-->
+      <div class="dropDownMenu d-lg-none" id="menu">
+        <div class="closeButton" onclick="document.getElementById('menu').style.transform='translateY(-100vh)'">
+          <span class="closeBar closeBar1"></span>
+          <span class="closeBar closeBar2"></span>
+        </div>
+        <ul class="dropDownList">
+         <li><a class="menuItem" href="#home" onclick="document.getElementById('menu').style.transform='translateY(-100vh)'">Home</a></li>
+         <li><a class="menuItem" href="#offers" onclick="document.getElementById('menu').style.transform='translateY(-100vh)'">Offers</a></li>
+         <li><a class="menuItem" href="#products" onclick="document.getElementById('menu').style.transform='translateY(-100vh)'">Products</a></li>
+         <li><a class="menuItem" href="#testimonials" onclick="document.getElementById('menu').style.transform='translateY(-100vh)'">Testimonials</a></li>
+         <li><a class="menuItem" href="#contact" onclick="document.getElementById('menu').style.transform='translateY(-100vh)'">Contact</a></li>
+        </ul>
+      </div>
+
+    </section>
+
+    <div data-bs-spy="scroll" data-bs-target=".navbar">
+      <!--Home Section-->
+      <section id="home" class="home container-fluid container-xxl pt-5 mt-3 overflow-hidden">
+        
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="home-banner home-banner-1">
+                <div class="home-banner-text">
+                  <h1>Mens Wear</h1>
+                  <h2>52% Discount for this Season</h2>
+                  <a href="#" class="btn btn-danger text-uppercase mt-4">Our Products</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="home-banner home-banner-2">
+                <div class="home-banner-text">
+                  <h1>Shop</h1>
+                  <h2>with Working Card & UPI</h2>
+                  <a href="#" class="btn btn-danger text-uppercase mt-4">Our Products</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon">
+              <span class="ti-angle-left slider-icon"></span>
+            </span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon">
+              <span class="ti-angle-right slider-icon"></span>
+            </span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        
+      </section>
+    
+      <!--Offer Section-->
+      <section id="offers" class="offers"><!--Full-width container-->
+        <div class="container">
+          
+          <div class="headline">
+            <h2>Special Offers</h2>
+          </div>
+
+          <div class="row"><!--1st Row container(so that can add extra rows if wanted instead of including "row with container class")-->
+
+            <!--Offer-Box One-->
+            <div class="col-sm-6 col-xl-4 mb-4 mb-xl-0"><!--Each Column container-->
+              <a href="#">
+                <div class="offer-box"> <!--offer-box relative parent for "absolute overlays & overflow-hidden" + to contain all elements-->
+                  <div class="offer-image"> <!--offer-image::before Gradient (Absolute overlay)-->
+                    <img decoding="async" src="assets/images/Coat 5/1.jpg" alt="Offers" class="img-fluid">
+                    <div class="offer-overlay"></div>
+                  </div>
+                  <div class="offer-info"> <!--Absolute Overlay on image-->
+                    <div class="offer-heading">Sale 30%</div>
+                    <div class="offer-title">Don't miss this Chance</div>
+                    <button type="button" class="btn btn-outline-danger text-uppercase mt-4">Shop Now</button>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!--Offer Box Two & Three-->
+            <div class="col-sm-6 col-xl-4 mb-md-4 mb-xl-0 d-flex flex-column justify-content-between">
+              <a href="#">
+                <div class="offer-box mb-4 mb-sm-0">
+                  <div class="offer-image">
+                    <img decoding="async" src="assets/images/Shoes 3/3.jpg" alt="Offers" class="img-fluid">
+                    <div class="offer-overlay"></div>
+                  </div>
+                  <div class="offer-info">
+                    <div class="offer-heading">Sale 70%</div>
+                    <div class="offer-title">Don't miss this Chance</div>
+                    <button type="button" class="btn btn-outline-danger text-uppercase mt-4">Shop Now</button>
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="offer-box mb-4 mb-sm-0">
+                  <div class="offer-image">
+                    <img decoding="async" src="assets/images/Shoes 3/5.jpg" alt="Offers" class="img-fluid">
+                    <div class="offer-overlay"></div>
+                  </div>
+                  <div class="offer-info">
+                    <div class="offer-heading">Sale 50%</div>
+                    <div class="offer-title">Don't miss this Chance</div>
+                    <button type="button" class="btn btn-outline-danger text-uppercase mt-4">Shop Now</button>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!--Offer Box Four-->
+            <div class="col-sm-6 col-xl-4 mb-4 mb-xl-0">
+              <a href="#">
+                <div class="offer-box">
+                  <div class="offer-image">
+                    <img decoding="async" src="assets/images/Pant 4/1.jpg" alt="Offers" class="img-fluid">
+                    <div class="offer-overlay"></div>
+                  </div>
+                  <div class="offer-info">
+                    <div class="offer-heading">Sale 25%</div>
+                    <div class="offer-title">Don't miss this Chance</div>
+                    <button type="button" class="btn btn-outline-danger text-uppercase mt-4">Shop Now</button>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      
+
+      <!--Products Section-->
+      <section id="products" class="products">
+        <div class="container">
+
+          <!--1-->
+          <div class="headline">
+            <h2>Featured Products</h2>
+          </div>
+
+          <!--2-->
+          <div class="row">
+            
+            <div class="col-sm-6 col-lg-4">
+              <a href="#" class="d-block text-center mb-5">
+                <div class="product-list">
+                  <div class="product-image position-relative">
+                    <img decoding="async" src="assets/images/Shirt 6/3.jpg" alt="Product" class="img-fluid product-image-primary">
+                    <img decoding="async" src="assets/images/Shirt 6/4.jpg" alt="Product" class="img-fluid product-image-secondary">
+                  </div>
+                  <div class="product-name pt-3">
+                    <h3 class="text-capitalize">Markham Men's Cotton Blend</h3>
+                    <p class="amount">Rs. 499.00</p>
+                    <div class="py-1">
+                      <span class="ti-star active"></span>
+                      <span class="ti-star active"></span>
+                      <span class="ti-star active"></span>
+                      <span class="ti-star"></span>
+                      <span class="ti-star"></span>
+                    </div>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-sm-6 col-lg-4">
+              <a href="#" class="d-block text-center mb-5">
+                <div class="product-list">
+                  <div class="product-image position-relative">
+                    <span class="sale">Sale</span>
+                    <img decoding="async" src="assets/images/Shirt 6/1.jpg" alt="Product" class="img-fluid product-image-primary">
+                    <img decoding="async" src="assets/images/Shirt 6/2.jpg" alt="Product" class="img-fluid product-image-secondary">
+                  </div>
+                  <div class="product-name pt-3">
+                    <h3 class="text-capitalize">Zartha Men's Striped Shirt</h3>
+                    <p class="amount">Rs. 422.00 &nbsp; <del> M.R.P.: Rs. 2,499</del></p>
+                    <div class="py-1">
+                      <span class="ti-star active"></span>
+                      <span class="ti-star active"></span>
+                      <span class="ti-star active"></span>
+                      <span class="ti-star active"></span>
+                      <span class="ti-star"></span>
+                    </div>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-sm-6 col-lg-4">
+              <a href="#" class="d-block text-center mb-5">
+                <div class="product-list">
+                  <div class="product-image position-relative">
+                    <img decoding="async" src="assets/images/Pant 4/6.jpg" alt="Product" class="img-fluid product-image-primary">
+                    <img decoding="async" src="assets/images/Pant 4/7.jpg" alt="Product" class="img-fluid product-image-secondary">
+                  </div>
+                  <div class="product-name pt-3">
+                    <h3 class="text-capitalize">Wrangler Jeans</h3>
+                    <p class="amount">Rs. 1,499.00</p>
+                    <div class="py-1">
+                      <span class="ti-star active"></span>
+                      <span class="ti-star active"></span>
+                      <span class="ti-star active"></span>
+                      <span class="ti-star"></span>
+                      <span class="ti-star"></span>
+                    </div>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-sm-6 col-lg-4">
+              <a href="#" class="d-block text-center mb-5">
+                <div class="product-list">
+                  <div class="product-image position-relative">
+                    <img decoding="async" src="assets/images/Shirt 6/7.jpg" alt="Product" class="img-fluid product-image-primary">
+                    <img decoding="async" src="assets/images/Shirt 6/8.jpg" alt="Product" class="img-fluid product-image-secondary">
+                  </div>
+                  <div class="product-name pt-3">
+                    <h3 class="text-capitalize">Markham Men's Cotton Blend</h3>
+                    <p class="amount">Rs. 499.00</p>
+                    <div class="py-1">
+                      <span class="ti-star active"></span>
+                      <span class="ti-star active"></span>
+                      <span class="ti-star active"></span>
+                      <span class="ti-star"></span>
+                      <span class="ti-star"></span>
+                    </div>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-sm-6 col-lg-4">
+              <a href="#" class="d-block text-center mb-5">
+                <div class="product-list">
+                  <div class="product-image position-relative">
+                    <span class="sale">Sale</span>
+                    <img decoding="async" src="assets/images/Shirt 6/5.jpg" alt="Product" class="img-fluid product-image-primary">
+                    <img decoding="async" src="assets/images/Shirt 6/6.jpg" alt="Product" class="img-fluid product-image-secondary">
+                  </div>
+                  <div class="product-name pt-3">
+                    <h3 class="text-capitalize">Zartha Men's Cotton Blend Shirt</h3>
+                    <p class="amount">Rs. 422.00 &nbsp; <del> M.R.P.: Rs. 1,499</del></p>
+                    <div class="py-1">
+                      <span class="ti-star active"></span>
+                      <span class="ti-star active"></span>
+                      <span class="ti-star active"></span>
+                      <span class="ti-star active"></span>
+                      <span class="ti-star"></span>
+                    </div>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-sm-6 col-lg-4">
+              <a href="#" class="d-block text-center mb-5">
+                <div class="product-list">
+                  <div class="product-image position-relative">
+                    <span class="sale">Sale</span>
+                    <img decoding="async" src="assets/images/Pant 4/8.jpg" alt="Product" class="img-fluid product-image-primary">
+                    <img decoding="async" src="assets/images/Pant 4/9.jpg" alt="Product" class="img-fluid product-image-secondary">
+                  </div>
+                  <div class="product-name pt-3">
+                    <h3 class="text-capitalize">Pepe Jeans</h3>
+                    <p class="amount">Rs. 1,049.00 &nbsp; <del> M.R.P.: Rs. 3,599</del></p>
+                    <div class="py-1">
+                      <span class="ti-star active"></span>
+                      <span class="ti-star active"></span>
+                      <span class="ti-star"></span>
+                      <span class="ti-star"></span>
+                      <span class="ti-star"></span>
+                    </div>
+                    <button type="button" class="add-to-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+
+          <!--3-->
+          <!--Up to 75% off-->
+          <div class="up-to-off overflow-hidden mt-3 mb-0">
+            <img decoding="async" src="assets/images/Spring Sale.jpg" alt="Offers" class="img-fluid w-100">
+            <div class="up-to-content">
+              <h2 class="text-center text-uppercase">Up to 75% off Spring Sale !</h2>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      
+
+      <!--Testimonial Section-->
+      <section id="testimonials" class="testimonials">
+        <div class="container">
+
+          <!--1] Heading-->
+          <div class="headline">
+            <h2>Testimonials</h2>
+          </div>
+
+          <!--2] Carousel-->
+          <div class="row">
+            <div class="col-sm-12 col-lg-8 offset-lg-2 text-center">
+
+              <div id="carouselExampleIndicatorsTwo" class="carousel slide" data-bs-ride="true">
+                <!--1-->
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicatorsTwo" data-bs-slide-to="0" class="active"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicatorsTwo" data-bs-slide-to="1"></button>
+                </div>
+
+                <!--2-->
+                <div class="carousel-inner">
+                  <div class="carousel-item active testimonial-wrapper">
+                    <img decoding="async" src="assets/images/Testimonials/0.jpeg" alt="customer" class="img-fluid">
+                    <div class="customer">
+                      <h3>Martin Johe, Co-Founder/CEO</h3>
+                      <span>Fastcompany ltd.</span>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="carousel-item testimonial-wrapper">
+                    <img decoding="async" src="assets/images/Testimonials/1.jpg" alt="customer" class="img-fluid">
+                    <div class="customer">
+                      <h3>Mark Zukerberg, Founder/CEO</h3>
+                      <span>Meta Inc.</span>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <!--3-->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsTwo" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon">
+                    <span class="ti-angle-left slider-icon"></span>
+                  </span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorsTwo" data-bs-slide="next">
+                  <span class="carousel-control-prev-icon">
+                    <span class="ti-angle-right slider-icon"></span>
+                  </span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+
+              </div>
+
+            </div>
+          </div>
+          
+        </div>
+      </section>
+      
+      
+      <!--Contact Section-->
+      <section id="contact" class="contact">
+        <div class="container px-4">
+
+          <!--1] Heading-->
+          <div class="mb-5 text-center">
+            <h5 class="fw-normal">Let's Start a Conversation !</h5>
+            <div class="headline">
+              <h2>Contact Us</h2>
+            </div>
+          </div>
+
+          <!--2] Contact-->
+          <div class="row">
+            
+            <!--1. Contact Info.-->
+            <div class="col-md-5">
+              <h4 class="fw-bold mb-4">Contact Info.</h4>
+
+              <ul class="list-unstyled">
+                <li>
+                  <div class="d-flex align-items-center my-3">
+                    <span class="ti-location-pin fs-5 pe-3"></span>
+                    <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="d-flex align-items-center my-3">
+                    <span class="ti-mobile fs-5 pe-3"></span>
+                    <p>+91 999-999-9999</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="d-flex align-items-center my-3">
+                    <span class="ti-email fs-5 pe-3"></span>
+                    <p>info@estore.in</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
+            <!--2. Message-->
+            <div class="col-md-7">
+              <form>
+                <div class="row">
+                  
+                  <div class="col-sm-6">
+                    <div class="form-group form-floating">
+                      <input type="text" class="form-control" id="name" name="name" placeholder="">
+                      <label class="form-label" for="name">Name</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group form-floating">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="">
+                      <label class="form-label" for="email">Email address</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group form-floating">
+                      <textarea class="form-control" cols="30" rows="4" id="message" name="message" placeholder=""></textarea>
+                      <label class="form-label" for="message">Enter your message</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 mt-2">
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-danger">Send Message</button>
+                    </div>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      
+      <!--Footer Section-->
+      <footer style="margin-bottom:-3rem;">
+        <div class="container">
+          <p class="text-center">Copyright © 2023 e-store All Rights Reserved</p>
+        </div>
+      </footer>
+    </div>
+
+    <!--Scroll to Top-->
+    <a class="scroll-to-top" href="#home"><img src="assets\images\logo\upper-arrow.png" alt="Scroll to Top"></a>
+
+    <!--Breakpoint Size (Responsive)-->
+    <span id="breakpoint" class="container"></span>
+
+    <!--Bootstrap 5 js-->
+    <script src="assets\css\bootstrap-5.3.2-dist\js\bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>
